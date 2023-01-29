@@ -31,5 +31,6 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
 		props: {
             article: await client.getOne('Article', (params as { id: string }).id)
 		},
+        revalidate: 300,
 	}
 }
