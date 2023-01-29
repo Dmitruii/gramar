@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 
     return {
         paths: articles.map(({id}) => ({ params: {id} })),
-        fallback: false,
+        fallback: "blocking",
     }
   }
 
